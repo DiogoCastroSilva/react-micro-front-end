@@ -14,6 +14,7 @@ defaults:
 
 jobs:
   build:
+    name: shalzz/zola-deploy-action
     runs-on: ubunto-latest
 
     steps:
