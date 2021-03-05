@@ -2,6 +2,10 @@
   "name": "dashboard",
   "version": "1.0.0",
   "author": "Diogo Silva",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DiogoCastroSilva/react-micro-front-end.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

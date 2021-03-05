@@ -18,9 +18,12 @@ jobs:
     runs-on: ubunto-latest
 
     steps:
+      - name: 'Checkout'
       - uses: actions/checkout@v2
       - run: npm install
       - run: npm run build
+        env:
+          PRODUCTION_DOMAIN: ${{ secrets.PRODUCTION_DOMAIN }}
 
       - uses: actions/checkout@master
       - name: shalzz/zola-deploy-action
