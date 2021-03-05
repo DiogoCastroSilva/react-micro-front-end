@@ -8,8 +8,7 @@ const commonConfig = require('./webpack.common');
 const devConfig = {
     mode: 'production',
     output: {
-        filename: '[name].[contenthash].js',
-        publicPath: '/container/latest/'
+        filename: '[name].[contenthash].js'
     },
     plugins: [
         new ModuleFederationPlugin({
