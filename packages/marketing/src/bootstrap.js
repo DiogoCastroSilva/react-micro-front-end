@@ -1,16 +1,33 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import { createMemoryHistory, createBrowserHistory } from 'history';
 
 import App from './App';
 
 
 
 // Mount function
-const mount = (element) => {
+const mount = (element, { onNavigate, defaultHistory }) => {
+    const history = defaultHistory || createMemoryHistory();
+
+    if (onNavigate) {
+        history.listen(onNavigate);
+    }
+
     ReactDom.render(
-        <App />,
+        <App history={history} />,
         element
     );
+
+    return {
+        onParentNavigate({ pathname: nextPathName }) {
+            const { pathname } = history.location;
+
+            if (pathname !== nextPathName) {
+                history.push(nextPathName);
+            }
+        }
+    };
 };
 
 // Development
@@ -19,7 +36,9 @@ if (process.env.NODE_ENV === 'development') {
     const devRoot = document.querySelector('#marketing-dev-root');
 
     if (devRoot) {
-        mount(devRoot);
+        mount(devRoot, {
+            defaultHistory: createBrowserHistory()
+        });
     }
 }
 
