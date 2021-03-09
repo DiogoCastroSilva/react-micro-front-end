@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Libraries
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 

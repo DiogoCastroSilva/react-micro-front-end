@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { createMemoryHistory, createBrowserHistory } from 'history';
 
+// Components
 import App from './App';
 
 

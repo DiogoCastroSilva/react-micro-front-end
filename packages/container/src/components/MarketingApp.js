@@ -1,6 +1,10 @@
 import React, { useRef, useEffect } from 'react';
-import { mount } from 'marketing/App';
+
+// Libraries
 import { useHistory } from 'react-router-dom';
+
+// Components
+import { mount } from 'marketing/App';
 
 
 export default () => {
