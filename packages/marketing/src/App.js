@@ -23,7 +23,7 @@ const generateClassName = createGenerateClassName({
 export default ({ history }) => {
     return (
         <div>
-            <StylesProvider createGenerateClassName={generateClassName}>
+            <StylesProvider generateClassName={generateClassName}>
                 <Router history={history}>
                     <Switch>
                         <Route exact path="/pricing" component={Pricing} />

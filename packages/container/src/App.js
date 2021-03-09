@@ -1,7 +1,10 @@
 import React, { lazy, Suspense, useState } from 'react';
 
 // Libraries
-import { StylesProvider } from '@material-ui/styles';
+import {
+    StylesProvider,
+    createGenerateClassName
+} from '@material-ui/styles';
 import {
     BrowserRouter,
     Route,
