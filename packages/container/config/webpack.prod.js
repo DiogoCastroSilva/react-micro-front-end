@@ -7,6 +7,7 @@ const packageConfig = require('../package.json');
 
 const MARKETING_DOMAIN = process.env.MARKETING_DOMAIN;
 const AUTH_DOMAIN = process.env.AUTH_DOMAIN;
+const DASH_DOMAIN = process.env.DASH_DOMAIN;
 
 const prodConfig = {
     mode: 'production',
@@ -19,7 +20,7 @@ const prodConfig = {
             remotes: {
                 marketing: `marketing@${MARKETING_DOMAIN}/remoteEntry.js`,
                 auth: `auth@${AUTH_DOMAIN}/remoteEntry.js`,
-                dash: `dashboard@${AUTH_DOMAIN}/remoteEntry.js`
+                dash: `dashboard@${DASH_DOMAIN}/remoteEntry.js`
             },
             shared: packageConfig.dependencies
         })
